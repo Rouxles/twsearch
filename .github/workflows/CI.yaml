@@ -55,6 +55,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+      - run: cargo install wasm-pack
       - run: make build-rust
       - run: make lint-rust
       - run: make test-twsearch-cpp-wrapper-cli
